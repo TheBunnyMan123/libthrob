@@ -101,8 +101,10 @@ impl Throbber {
     }
 
     /// This automatically runs once out of scope, but in case you want to kill the thread early,
-    /// call this
+    /// call this. This automatically disables raw mode, since this is meant to be a one throbber
+    /// for the whole crate library.
     pub fn kill_thread(&self) {
+        terminal::disable_raw_mode();
         self.killed.store(true, Ordering::SeqCst);
     }
 }
