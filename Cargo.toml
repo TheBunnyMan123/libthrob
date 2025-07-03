@@ -1,5 +1,8 @@
 [package]
 name = "libthrob"
+description = "A terminal throbber crate"
+repository = "https://github.com/TheBunnyMan123/libthrob"
+license = "Apache-2.0"
 version = "0.1.0"
 edition = "2024"
 
